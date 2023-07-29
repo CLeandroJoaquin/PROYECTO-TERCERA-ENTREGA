@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title> Lista de Operadores</title>
+{% endblock titulo %}
+
+{% block contenido %}
+<h3>Operadores:</h3>
+<br><br>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Numero de Legajo</th>
+            <th>Antiguedad</th>
+            <th>Puesto</th>
+            <th></th>
+
+        </tr>
+        {% for operador in lista_operarios %}    #revisar si está bien  la variable OPERADOR y lista_operarios
+        <tr>
+            <td> {{ operador.id }}</td>
+            <td> {{ operador.nombre }}</td>
+            <td> {{ operador.numero_legajo}}</td>
+            <td> {{ operador.antiguedad}}</td>
+            <td> {{ operador.puesto}}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
+
+
+
+
+
+
+             
